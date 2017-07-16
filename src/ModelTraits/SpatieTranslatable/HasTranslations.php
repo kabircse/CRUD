@@ -64,7 +64,7 @@ trait HasTranslations
         foreach ($attributes as $attribute => $value) {
             if ($model->isTranslatableAttribute($attribute)) { // the attribute is translatable
                 $translations = $value;
-                if (!is_array($value)) {
+                if (! is_array($value)) {
                     $translations = [$locale => $value];
                 }
                 $model->setTranslations($attribute, $translations);
@@ -97,7 +97,7 @@ trait HasTranslations
         foreach ($attributes as $attribute => $value) {
             if ($this->isTranslatableAttribute($attribute)) { // the attribute is translatable
                 $translations = $value;
-                if (!is_array($value)) {
+                if (! is_array($value)) {
                     $translations = [$locale => $value];
                 }
                 $model->setTranslations($attribute, $translations);
